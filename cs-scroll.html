@@ -6,7 +6,19 @@
 `<sc-scroll target=[[myid]]></sc-scroll>` scrolls the element with id `myid` into view.
 <cs-scroll> and the element with `myid` have to be contained in `<sc-scroll>`s parent element.
 ### Example:
-This allows you to implement same page routing in an elements shadow dom:
+This allows you to implement same page routing in an app's shell elements shadow dom:
+
+```
+  <app-location route="{{route}}" use-hash-as-path></app-location>
+  <app-route    route="{{route}}"
+                pattern=":id"
+                data="{{data}}" >
+  </app-route>
+  
+  <cs-scroll target="{{data.id}}"></cs-scroll>
+```    
+@customElement 
+@polymer
    */
     class CsScroll extends Polymer.Element {
       
@@ -14,10 +26,20 @@ This allows you to implement same page routing in an elements shadow dom:
 
       static get properties(){
         return {
+/*
+Id of the element that is scrolled into view 
+*/
           target:{
             type:String,
             observer: '_jumpToId'
           },
+/*
+status used for errorhandling. Set by private method `_jumpToId()`.  
+Values: 
+- `found_target`: target is set to an elements id that was found and scrolled ito view
+- `no_target`:  target is empty
+- `wrong_target`: target is set to an id that was not found
+*/
           _status: {
             type:String,
             value:"unused"
@@ -25,7 +47,9 @@ This allows you to implement same page routing in an elements shadow dom:
           }
         }
       }
-
+/*
+scrolls element with id `this.target` into view using its `scrollIntoView()` method.
+*/
       _jumpToId(){
         //debugger;
         if(this.target){
