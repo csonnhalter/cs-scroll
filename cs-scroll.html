@@ -1,20 +1,12 @@
 <link rel="import" href="./bower_components/polymer/polymer-element.html">
 
 <dom-module id="cs-scroll">
-  
 <script>
 /**
-   * # This is an h1 heading 
-   * `<awesome-sauce>` injects a healthy dose of awesome into your page.
-   * ## This is an h2 heading
-   * In typical use, just slap some `<awesome-sauce>` at the top of your body:
-   * <body>
-   *   <awesome-sauce></awesome-sauce>
-   * Wham! It's all awesome now!
-   * @customElement
-   * @polymer
-   * @demo https://path/to/awesomeness/demo/
-   * 
+`<sc-scroll target=[[myid]]></sc-scroll>` scrolls the element with id `myid` into view.
+<cs-scroll> and the element with `myid` have to be contained in `<sc-scroll>`s parent element.
+### Example:
+This allows you to implement same page routing in an elements shadow dom:
    */
     class CsScroll extends Polymer.Element {
       

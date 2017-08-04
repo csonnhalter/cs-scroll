@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "elements": [
     {
-      "description": "# This is an h1 heading \n`<awesome-sauce>` injects a healthy dose of awesome into your page.\n## This is an h2 heading\nIn typical use, just slap some `<awesome-sauce>` at the top of your body:\n<body>\n  <awesome-sauce></awesome-sauce>\nWham! It's all awesome now!",
+      "description": "`<sc-scroll target=[[myid]]></sc-scroll>` scrolls the element with id `myid` into view.\n<cs-scroll> and the element with `myid` have to be contained in `<sc-scroll>`s parent element.\n### Example:\nThis allows you to implement same page routing in an elements shadow dom:",
       "summary": "",
       "path": "cs-scroll.html",
       "properties": [
@@ -634,11 +634,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 24,
+              "line": 16,
               "column": 10
             },
             "end": {
-              "line": 27,
+              "line": 19,
               "column": 11
             }
           },
@@ -655,11 +655,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 28,
+              "line": 20,
               "column": 10
             },
             "end": {
-              "line": 32,
+              "line": 24,
               "column": 11
             }
           },
@@ -2577,11 +2577,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 36,
+              "line": 28,
               "column": 6
             },
             "end": {
-              "line": 50,
+              "line": 42,
               "column": 7
             }
           },
@@ -3285,20 +3285,15 @@
           "inheritedFrom": "Polymer.ElementMixin"
         }
       ],
-      "demos": [
-        {
-          "url": "https://path/to/awesomeness/demo/",
-          "description": ""
-        }
-      ],
+      "demos": [],
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 18,
+          "line": 10,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 43,
           "column": 5
         }
       },
@@ -3311,11 +3306,11 @@
           "description": "",
           "sourceRange": {
             "start": {
-              "line": 24,
+              "line": 16,
               "column": 10
             },
             "end": {
-              "line": 27,
+              "line": 19,
               "column": 11
             }
           },
