@@ -1,0 +1,57 @@
+<link rel="import" href="./bower_components/polymer/polymer-element.html">
+
+<dom-module id="cs-scroll">
+  
+<script>
+/**
+   * # This is an h1 heading 
+   * `<awesome-sauce>` injects a healthy dose of awesome into your page.
+   * ## This is an h2 heading
+   * In typical use, just slap some `<awesome-sauce>` at the top of your body:
+   * <body>
+   *   <awesome-sauce></awesome-sauce>
+   * Wham! It's all awesome now!
+   * @customElement
+   * @polymer
+   * @demo https://path/to/awesomeness/demo/
+   * 
+   */
+    class CsScroll extends Polymer.Element {
+      
+      static get is() { return 'cs-scroll'; }
+
+      static get properties(){
+        return {
+          target:{
+            type:String,
+            observer: '_jumpToId'
+          },
+          _status: {
+            type:String,
+            value:"unused"
+            
+          }
+        }
+      }
+
+      _jumpToId(){
+        //debugger;
+        if(this.target){
+          let jumpTo = this.parentNode.querySelector('#'+this.target);
+          if (jumpTo){
+            jumpTo.scrollIntoView();
+            this._status = "found_target";
+          }else{
+            console.log("Coud not scroll to element with id", jumpTo, " It does not exists in this dom!");
+            this._status = "wrong_target";
+          }
+        }else{
+          this._status = "no_target";
+        }
+      }  
+    }
+
+  customElements.define(CsScroll.is, CsScroll);  
+  </script>
+</dom-module>
+    
