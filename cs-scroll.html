@@ -1,3 +1,4 @@
+<!-- <link rel="import" href="./bower_components/polymer/polymer-element.html"> -->
 <link rel="import" href="./bower_components/polymer/polymer-element.html">
 
 <dom-module id="cs-scroll">
@@ -58,7 +59,7 @@ scrolls element with id `this.target` into view using its `scrollIntoView()` met
             jumpTo.scrollIntoView();
             this._status = "found_target";
           }else{
-            console.log("Coud not scroll to element with id", jumpTo, " It does not exists in this dom!");
+            console.log("Could not scroll to element with id", this.target, ". It does not exists in this dom tree!");
             this._status = "wrong_target";
           }
         }else{
