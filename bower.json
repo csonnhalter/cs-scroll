@@ -15,6 +15,6 @@
     "polymer": "^2.0.0"
   },
   "demos": {
-    "Demo": "demo/index.html"
+    "Demo": "index.html"
   }
 }
