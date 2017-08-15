@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "elements": [
     {
-      "description": "`<sc-scroll target=[[myid]]></sc-scroll>` scrolls the element with id `myid` into view.\n<cs-scroll> and the element with `myid` have to be contained in `<sc-scroll>`s parent element.\n### Example:\nThis allows you to implement same page routing in an app's shell elements shadow dom:\n\n```\n  <app-location route=\"{{route}}\" use-hash-as-path></app-location>\n  <app-route    route=\"{{route}}\"\n                pattern=\":id\"\n                data=\"{{data}}\" >\n  </app-route>\n  \n  <cs-scroll target=\"{{data.id}}\"></cs-scroll>\n```",
+      "description": "`<sc-scroll target=[[myid]]></sc-scroll>` scrolls the element with id `myid` into view.\n`<cs-scroll>` and the element with `myid` have to be contained in `<sc-scroll>`'s parent element.\n### Example:\nThis allows you to implement same page routing in an app's shell element using `<app-route>`:\n\n```\n  <app-location route=\"{{route}}\" use-hash-as-path></app-location>\n  <app-route    route=\"{{route}}\"\n                pattern=\":id\"\n                data=\"{{data}}\" >\n  </app-route>\n  \n  <cs-scroll target=\"[[data.id]]\"></cs-scroll>\n\n  <a href=\"#one\">One</a></li>\n\n\n``` \nClicking the link scrolls to the element with id=\"one\".",
       "summary": "",
       "path": "cs-scroll.html",
       "properties": [
@@ -13,11 +13,11 @@
           "privacy": "public",
           "sourceRange": {
             "start": {
-              "line": 31,
+              "line": 36,
               "column": 10
             },
             "end": {
-              "line": 34,
+              "line": 39,
               "column": 11
             }
           },
@@ -34,11 +34,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 42,
+              "line": 47,
               "column": 10
             },
             "end": {
-              "line": 46,
+              "line": 51,
               "column": 11
             }
           },
@@ -55,11 +55,11 @@
           "privacy": "protected",
           "sourceRange": {
             "start": {
-              "line": 52,
+              "line": 57,
               "column": 6
             },
             "end": {
-              "line": 66,
+              "line": 71,
               "column": 7
             }
           },
@@ -72,11 +72,11 @@
       "metadata": {},
       "sourceRange": {
         "start": {
-          "line": 22,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 67,
+          "line": 72,
           "column": 5
         }
       },
@@ -89,11 +89,11 @@
           "description": "Id of the element that is scrolled into view",
           "sourceRange": {
             "start": {
-              "line": 31,
+              "line": 36,
               "column": 10
             },
             "end": {
-              "line": 34,
+              "line": 39,
               "column": 11
             }
           },
@@ -108,6 +108,96 @@
       },
       "slots": [],
       "tagname": "cs-scroll"
+    },
+    {
+      "description": "",
+      "summary": "",
+      "path": "demo/cs-scroll-demo.html",
+      "properties": [
+        {
+          "name": "newv",
+          "type": "string",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 197,
+              "column": 8
+            },
+            "end": {
+              "line": 199,
+              "column": 11
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          }
+        }
+      ],
+      "methods": [
+        {
+          "name": "_setinner",
+          "description": "",
+          "privacy": "protected",
+          "sourceRange": {
+            "start": {
+              "line": 203,
+              "column": 6
+            },
+            "end": {
+              "line": 207,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "params": [
+            {
+              "name": "event"
+            }
+          ]
+        }
+      ],
+      "staticMethods": [],
+      "demos": [],
+      "metadata": {},
+      "sourceRange": {
+        "start": {
+          "line": 191,
+          "column": 4
+        },
+        "end": {
+          "line": 208,
+          "column": 5
+        }
+      },
+      "privacy": "public",
+      "superclass": "HTMLElement",
+      "name": "CsScrollDemo",
+      "attributes": [
+        {
+          "name": "newv",
+          "description": "",
+          "sourceRange": {
+            "start": {
+              "line": 197,
+              "column": 8
+            },
+            "end": {
+              "line": 199,
+              "column": 11
+            }
+          },
+          "metadata": {},
+          "type": "string"
+        }
+      ],
+      "events": [],
+      "styling": {
+        "cssVariables": [],
+        "selectors": []
+      },
+      "slots": [],
+      "tagname": "cs-scroll-demo"
     }
   ]
 }
