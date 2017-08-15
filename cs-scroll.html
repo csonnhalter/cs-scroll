@@ -4,9 +4,9 @@
 <script>
 /**
 `<sc-scroll target=[[myid]]></sc-scroll>` scrolls the element with id `myid` into view.
-<cs-scroll> and the element with `myid` have to be contained in `<sc-scroll>`s parent element.
+`<cs-scroll>` and the element with `myid` have to be contained in `<sc-scroll>`'s parent element.
 ### Example:
-This allows you to implement same page routing in an app's shell elements shadow dom:
+This allows you to implement same page routing in an app's shell element using `<app-route>`:
 
 ```
   <app-location route="{{route}}" use-hash-as-path></app-location>
@@ -15,8 +15,13 @@ This allows you to implement same page routing in an app's shell elements shadow
                 data="{{data}}" >
   </app-route>
   
-  <cs-scroll target="{{data.id}}"></cs-scroll>
-```    
+  <cs-scroll target="[[data.id]]"></cs-scroll>
+
+  <a href="#one">One</a></li>
+
+
+``` 
+Clicking the link scrolls to the element with id="one".    
 @customElement 
 @polymer
    */
