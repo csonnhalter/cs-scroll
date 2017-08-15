@@ -1,5 +1,6 @@
 {
   "name": "cs-scroll",
+  "version": "0.9.0",
   "description": "scroll to element with id given as target",
   "main": "cs-scroll.html",
   "dependencies": {
