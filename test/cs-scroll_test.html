@@ -25,8 +25,9 @@
         <div id="testme"></div>
       </template>
     </test-fixture>
+    
     <script>
-     
+   
       suite('cs-scroll', function() {
 
         test('instantiating the element with no properties works', function() {
@@ -38,7 +39,7 @@
         test('setting a property on the element works', function() {
           let elements = fixture('ChangedPropertyTestFixture');
           assert.equal(elements[0].target,elements[1].id);
-       });
+        });
         
         test('setting target triggers observer and sets correct status if id exists', function() {
           let elements = fixture('ChangedPropertyTestFixture');

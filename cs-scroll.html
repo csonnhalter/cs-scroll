@@ -1,7 +1,7 @@
 <link rel="import" href="./bower_components/polymer/polymer-element.html">
 
 <dom-module id="cs-scroll">
-<script>
+  <script>
 /**
 `<sc-scroll target=[[myid]]></sc-scroll>` scrolls the element with id `myid` into view.
 `<cs-scroll>` and the element with `myid` have to be contained in `<sc-scroll>`'s parent element.
@@ -56,7 +56,7 @@ Values:
 scrolls element with id `this.target` into view using its `scrollIntoView()` method.
 */
       _jumpToId(){
-        //debugger;
+
         if(this.target){
           let jumpTo = this.parentNode.querySelector('#'+this.target);
           if (jumpTo){
@@ -72,7 +72,7 @@ scrolls element with id `this.target` into view using its `scrollIntoView()` met
       }  
     }
 
-  customElements.define(CsScroll.is, CsScroll);  
+    customElements.define(CsScroll.is, CsScroll);  
   </script>
 </dom-module>
     
